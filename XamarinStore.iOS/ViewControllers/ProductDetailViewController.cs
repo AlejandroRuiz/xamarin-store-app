@@ -32,7 +32,7 @@ namespace XamarinStore.iOS
 			TableView.TableFooterView = new UIView (new RectangleF (0, 0, 0, BottomButtonView.Height));
 
 			View.AddSubview (BottomView = new BottomButtonView () {
-				ButtonText = "Add to Basket",
+				ButtonText = "add_to_basket".t(),
 				Button = {
 					Image = (tshirtIcon = UIImage.FromBundle("t-shirt")),
 				},
@@ -161,7 +161,7 @@ namespace XamarinStore.iOS
 		IEnumerable<UITableViewCell> GetOptionsCells ()
 		{
 			yield return sizeCell = new StringSelectionCell (View) {
-				Text = "Size",
+				Text = "size".t(),
 				Items = sizeOptions.Select (x => x.Description),
 				DetailText = CurrentProduct.Size.Description,
 				SelectionChanged = () => {
@@ -171,7 +171,7 @@ namespace XamarinStore.iOS
 			};
 
 			yield return colorCell = new StringSelectionCell (View) {
-				Text = "Color",
+				Text = "color".t(),
 				Items = colorOptions.Select (x => x.Name),
 				DetailText = CurrentProduct.Color.Name,
 				SelectionChanged = () => {

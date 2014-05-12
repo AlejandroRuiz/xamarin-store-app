@@ -13,7 +13,7 @@ namespace XamarinStore
 			BackgroundColor = UIColor.White;
 			this.AddSubview(image = new UIImageView (UIImage.FromBundle ("empty-basket")));
 			this.Add (text = new UILabel {
-				Text = "Your basket is empty",
+				Text = "your_basket_empty".t(),
 				TextColor = UIColor.LightGray,
 				Font = UIFont.BoldSystemFontOfSize(20f),
 				TextAlignment = UITextAlignment.Center,

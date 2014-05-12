@@ -28,7 +28,7 @@
         android:singleLine="true" />
     <Button
         style="@style/XamButton"
-        android:text="Sign in"
+        android:text="@string/sign_in"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/signInBtn"

@@ -32,6 +32,7 @@ namespace XamarinStore.iOS
 			GetData ();
 		}
 
+
 		async void GetData ()
 		{
 			source.Products = await WebService.Shared.GetProducts ();

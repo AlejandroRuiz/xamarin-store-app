@@ -7,7 +7,7 @@ namespace Xamarin.SSO.Client
     [JsonObject (MemberSerialization.OptIn)]
     public class User
     {
-        [JsonProperty (PropertyName = "email")]
+		[JsonProperty (PropertyName = "email")]
         public string Email { get; set; }
 
         [JsonProperty (PropertyName = "firstname")]

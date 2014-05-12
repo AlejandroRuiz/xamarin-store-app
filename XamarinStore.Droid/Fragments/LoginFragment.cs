@@ -90,20 +90,20 @@ namespace XamarinStore
 		readonly string XamarinAccountEmail = "";
 		async void Login (string username, string password)
 		{
-			var progressDialog = ProgressDialog.Show (this.Activity, "Please wait...", "Logging in", true);
+			var progressDialog = ProgressDialog.Show (this.Activity, this.Resources.GetString(Resource.String.please_wait), this.Resources.GetString(Resource.String.logging_in), true);
 			this.login.Enabled = false;
 			this.password.Enabled = false;
 			var success = await WebService.Shared.Login (username, password);
 			if (success) {
 				var canContinue = await WebService.Shared.PlaceOrder (WebService.Shared.CurrentUser, true);
 				if (!canContinue.Success) {
-					Toast.MakeText (this.Activity,"Sorry, only one shirt per person. Edit your cart and try again.", ToastLength.Long).Show();
+					Toast.MakeText (this.Activity, this.Resources.GetString(Resource.String.sorry_one_shirt), ToastLength.Long).Show();
 				}
 				else
 					LoginSucceeded ();
 			}
 			else 
-				Toast.MakeText (this.Activity, "Please verify your Xamarin account credentials and try again", ToastLength.Long).Show();
+				Toast.MakeText (this.Activity, this.Resources.GetString(Resource.String.please_verify_credentials), ToastLength.Long).Show();
 
 			this.login.Enabled = true;
 			this.password.Enabled = true;

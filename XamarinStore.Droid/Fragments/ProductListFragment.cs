@@ -48,6 +48,7 @@ namespace XamarinStore
 			var adapter = (ProductListViewAdapter)ListAdapter;
 			adapter.Products = await WebService.Shared.GetProducts ();
 			//No need to await the precache, we just need to kick it off
+
 			#pragma warning disable 4014
 			WebService.Shared.PreloadImages (Images.ScreenWidth);
 			#pragma warning restore 4014
@@ -161,4 +162,3 @@ namespace XamarinStore
 		}
 	}
 }
-

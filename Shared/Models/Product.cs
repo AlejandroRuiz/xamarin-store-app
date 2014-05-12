@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using System.Reflection;
 using System.ComponentModel;
+using System.Globalization;
 
 namespace XamarinStore
 {
@@ -56,11 +57,9 @@ namespace XamarinStore
 			return string.Format ("{0}?width={1}", url, width);
 		}
 
-		public string PriceDescription {
-			get {
+		public string PriceDescription { get{ 
 				return Price < 0.01 ? "Free" : Price.ToString ("C");
-			}
-		}
+			}}
 
 		public ProductColor[] Colors { get; set; }
 

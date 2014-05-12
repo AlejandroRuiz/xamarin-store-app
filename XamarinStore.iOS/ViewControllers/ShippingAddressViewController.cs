@@ -28,7 +28,7 @@ namespace XamarinStore
 
 		public ShippingAddressViewController (User user)
 		{
-			this.Title = "Shipping";
+			this.Title = "ship_information".t();
 			//This hides the back button text when you leave this View Controller
 			this.NavigationItem.BackBarButtonItem = new UIBarButtonItem ("", UIBarButtonItemStyle.Plain, handler: null);
 			this.user = user;
@@ -36,56 +36,56 @@ namespace XamarinStore
 
 
 			Cells.Add (new CustomViewCell (FirstNameField = new TextEntryView {
-				PlaceHolder = "First Name",
+				PlaceHolder = "firts_name".t(),
 				Value = user.FirstName,
 			}));
 
 			Cells.Add (new CustomViewCell (LastNameField = new TextEntryView {
-				PlaceHolder = "Last Name",
+				PlaceHolder = "last_name".t(),
 				Value = user.LastName,
 			}));
 
 			Cells.Add (new CustomViewCell (PhoneNumberField = new TextEntryView {
-				PlaceHolder = "Phone Number",
+				PlaceHolder = "phone".t(),
 				Value = user.Phone,
 				KeyboardType = UIKeyboardType.NumberPad,
 			}));
 
 			Cells.Add (new CustomViewCell (AddressField = new TextEntryView {
-				PlaceHolder = "Address",
+				PlaceHolder = "street_add_1".t(),
 				Value = user.Address,
 				AutocapitalizationType = UITextAutocapitalizationType.Words,
 			}));
 
 			Cells.Add (new CustomViewCell (Address2Field = new TextEntryView {
-				PlaceHolder = "Address",
+				PlaceHolder = "street_add_2".t(),
 				Value = user.Address2,
 				AutocapitalizationType = UITextAutocapitalizationType.Words,
 			}));
 			Cells.Add (new CustomViewCell (CityField = new TextEntryView {
-				PlaceHolder = "City",
+				PlaceHolder = "city".t(),
 				Value = user.City,
 				AutocapitalizationType = UITextAutocapitalizationType.Words,
 			}));
 
 			Cells.Add (new CustomViewCell (PostalField = new TextEntryView {
-				PlaceHolder = "Postal Code",
+				PlaceHolder = "postal_code".t(),
 				Value = user.ZipCode,
 				KeyboardType = UIKeyboardType.NumbersAndPunctuation,
 			}));
 
 			Cells.Add (new CustomViewCell (CountryField = new AutoCompleteTextEntry {
-				PlaceHolder = "Country",
-				Title = "Select your Country",
+				PlaceHolder = "country".t(),
+				Title = "s_country".t(),
 				Value = user.Country,
 				ValueChanged = (v) => GetStates (),
 				PresenterView = this,
 			}));
 
 			Cells.Add (new CustomViewCell (StateField = new AutoCompleteTextEntry {
-				PlaceHolder = "State",
+				PlaceHolder = "state".t(),
 				Value = user.State,
-				Title = "Select your state",
+				Title = "s_state".t(),
 				PresenterView = this,
 			}));
 
@@ -98,7 +98,7 @@ namespace XamarinStore
 			TableView.ReloadData ();
 
 			View.AddSubview (BottomView = new BottomButtonView () {
-				ButtonText = "Place Order",
+				ButtonText = "place_order".t(),
 				ButtonTapped = PlaceOrder,
 			});
 
@@ -118,7 +118,7 @@ namespace XamarinStore
 			var isValid = await user.IsInformationValid ();
 			if (!isValid.Item1) {
 
-				new UIAlertView ("Error", isValid.Item2, null, "Ok").Show ();
+				new UIAlertView ("error".t(), isValid.Item2, null, "Ok").Show ();
 				return;
 			}
 			if (ShippingComplete != null)

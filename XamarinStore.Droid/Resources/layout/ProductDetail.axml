@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp">
             <TextView
-                android:text="Men's C# t-shirt"
+                android:text="@string/mens_c_tshirt"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:id="@+id/productTitle"
@@ -31,7 +31,7 @@
                 android:gravity="bottom"
                 android:textColor="@color/xam_purple" />
             <TextView
-                android:text="Free"
+                android:text="@string/free"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:id="@+id/productPrice"
@@ -42,7 +42,7 @@
                 android:gravity="bottom" />
         </LinearLayout>
         <TextView
-            android:text="Flaunt your C# pride in this svelte American Apparel t-shirt, and everyone around you will think LINQ stands for &quot;Lads in Nice Qlothing&quot;"
+            android:text="@string/flaunt_linq"
             android:id="@+id/productDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -56,7 +56,7 @@
             android:layout_marginBottom="8dp">
             <TableRow>
                 <TextView
-                    android:text="Size"
+                    android:text="@string/size"
                     android:id="@+id/textView4"
                     android:textAllCaps="true"
                     android:layout_column="0"
@@ -71,7 +71,7 @@
             </TableRow>
             <TableRow>
                 <TextView
-                    android:text="Color"
+                    android:text="@string/color"
                     android:id="@+id/textView4"
                     android:textAllCaps="true"
                     android:layout_column="0"
@@ -87,7 +87,7 @@
         </TableLayout>
         <Button
             style="@style/XamButton"
-            android:text="Add to Basket"
+            android:text="@string/add_to_basket"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"

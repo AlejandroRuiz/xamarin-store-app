@@ -5,7 +5,7 @@
     android:layout_height="fill_parent">
     <TextView
         style="?android:listSeparatorTextViewStyle"
-        android:text="Shipping information"
+        android:text="@string/ship_information"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
@@ -28,26 +28,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/FirstName"
-                android:hint="First Name" />
+                android:hint="@string/firts_name" />
             <EditText
                 android:inputType="textPersonName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/LastName"
-                android:hint="Last Name" />
+                android:hint="@string/last_name" />
             <EditText
                 android:inputType="phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/Phone"
-                android:hint="Phone number"
+                android:hint="@string/phone"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="4dp" />
             <EditText
                 android:inputType="textPostalAddress"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:hint="Street Address 1"
+                android:hint="@string/street_add_1"
                 android:id="@+id/StreetAddress1"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="4dp" />
@@ -55,7 +55,7 @@
                 android:inputType="textPostalAddress"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:hint="Street Address 2"
+                android:hint="@string/street_add_2"
                 android:id="@+id/StreetAddress2"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="4dp" />
@@ -63,7 +63,7 @@
                 android:inputType="textPostalAddress"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:hint="City"
+                android:hint="@string/city"
                 android:id="@+id/City"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="4dp" />
@@ -71,7 +71,7 @@
                 android:inputType="text"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:hint="Postal Code"
+                android:hint="@string/postal_code"
                 android:id="@+id/PostalCode"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="4dp" />
@@ -79,7 +79,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/Country"
-                android:hint="Country"
+                android:hint="@string/country"
                 android:imeOptions="actionNext"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="4dp" />
@@ -87,13 +87,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/State"
-                android:hint="State"
+                android:hint="@string/state"
                 android:imeOptions="actionDone"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="4dp" />
             <Button
                 style="@style/XamButton"
-                android:text="Place Order"
+                android:text="@string/place_order"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/PlaceOrder"

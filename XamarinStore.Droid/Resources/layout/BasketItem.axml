@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/linearLayout3">
                 <TextView
-                    android:text="Men's C# t-shirt"
+                    android:text="@string/mens_c_tshirt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/productTitle"
@@ -49,7 +49,7 @@
                     android:textSize="18sp"
                     android:textColor="#272727" />
                 <TextView
-                    android:text="Free"
+                    android:text="@string/free"
                     android:id="@+id/productPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -59,14 +59,14 @@
                     android:textAllCaps="true" />
             </LinearLayout>
             <TextView
-                android:text="Orangutan (Large)"
+                android:text="@string/orangutan_large"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/productSize"
                 android:textSize="11sp"
                 android:textColor="#8c8c8c" />
             <TextView
-                android:text="Navy"
+                android:text="@string/navy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/productColor"
@@ -83,7 +83,7 @@
         android:id="@+id/SwipeAfter"
         android:visibility="invisible">
         <TextView
-            android:text="Item removed"
+            android:text="@string/item_removed"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/textView1"
@@ -98,7 +98,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp" />
         <Button
-            android:text="Cancel"
+            android:text="@string/cancel"
             android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"

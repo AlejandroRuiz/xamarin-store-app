@@ -84,7 +84,7 @@ namespace XamarinStore
 				SecureTextEntry = true,
 				TranslatesAutoresizingMaskIntoConstraints = false,
 				ReturnKeyType = UIReturnKeyType.Go,
-				Placeholder = "Password"
+				Placeholder = "password".t()
 			});
 
 			AddConstraint (NSLayoutConstraint.Create (

@@ -20,7 +20,7 @@ namespace XamarinStore.iOS
 		/// instructions are displayed instead of the login screen.</param>
 		public LoginViewController ()
 		{
-			this.Title = "Log in";
+			this.Title = "log_in".t ();
 			//This hides the back button text when you leave this View Controller
 			this.NavigationItem.BackBarButtonItem = new UIBarButtonItem ("", UIBarButtonItemStyle.Plain, handler: null);
 			AutomaticallyAdjustsScrollViewInsets = false;
@@ -82,17 +82,17 @@ namespace XamarinStore.iOS
 
 		// TODO: Enter your Xamarin account email address here
 		// If you do not have a Xamarin Account please sign up here: https://store.xamarin.com/account/register
-		readonly string XamarinAccountEmail = "";
+		readonly string XamarinAccountEmail = "alejandroruizvarela@hotmail.com";
 		async void Login (string username, string password)
 		{
 
-			BTProgressHUD.Show ("Logging in...");
+			BTProgressHUD.Show ("logging_in".t());
 
 			var success = await WebService.Shared.Login (username, password);
 			if (success) {
 				var canContinue = await WebService.Shared.PlaceOrder (WebService.Shared.CurrentUser, true);
 				if (!canContinue.Success) {
-					new UIAlertView ("Sorry", "Only one shirt per person. Edit your cart and try again.", null, "OK").Show();
+					new UIAlertView ("sorry".t(), "sorry_one_shirt".t(), null, "OK").Show();
 					BTProgressHUD.Dismiss ();
 					return;
 				}
@@ -103,7 +103,7 @@ namespace XamarinStore.iOS
 			if (success) {
 				LoginSucceeded ();
 			} else {
-				var alert = new UIAlertView ("Could Not Log In", "Please verify your Xamarin account credentials and try again", null, "OK");
+				var alert = new UIAlertView ("could_log".t(), "please_verify_credentials".t(), null, "OK");
 				alert.Show ();
 				alert.Clicked += delegate {
 					LoginView.PasswordField.SelectAll (this);

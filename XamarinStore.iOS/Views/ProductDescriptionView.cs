@@ -22,7 +22,7 @@ namespace XamarinStore
 			//this.TranslatesAutoresizingMaskIntoConstraints = false;
 			Name = new UILabel
 				{
-					Text = "Name",
+				Text = "name".t(),
 					BackgroundColor = UIColor.Clear,
 					TextColor = UIColor.DarkGray,
 					Font = UIFont.SystemFontOfSize(25f),
@@ -46,7 +46,7 @@ namespace XamarinStore
 			Price = new UILabel
 				{
 					BackgroundColor = UIColor.Clear,
-					Text = "Price",
+				Text = "price".t(),
 					TextColor = Color.Blue,
 					TranslatesAutoresizingMaskIntoConstraints = false,
 				};

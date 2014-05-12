@@ -16,8 +16,6 @@
     <AssemblyName>XamarinStore</AssemblyName>
     <TargetFrameworkVersion>v4.4</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
-    <ProductVersion>12.0.0</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -209,6 +207,7 @@
     <AndroidResource Include="Resources\drawable\btn_bg.xml" />
     <AndroidResource Include="Resources\drawable\btn_bg_inactive.xml" />
     <AndroidResource Include="Resources\drawable\btn_bg_pressed.xml" />
+    <AndroidResource Include="Resources\values-es\Strings.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup />
@@ -225,6 +224,7 @@
     <Folder Include="Views\" />
     <Folder Include="Shared\Helpers\" />
     <Folder Include="Resources\drawable-ldpi\" />
+    <Folder Include="Resources\values-es\" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="json.net">

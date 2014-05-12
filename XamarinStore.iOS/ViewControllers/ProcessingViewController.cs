@@ -17,7 +17,7 @@ namespace XamarinStore.iOS
 
 		public ProcessingViewController (User user)
 		{
-			Title = "Processing";
+			Title = "process";
 			this.user = user;
 			this.NavigationItem.RightBarButtonItem = new UIBarButtonItem (UIBarButtonSystemItem.Cancel, (sender,args) => {
 				this.DismissViewControllerAsync(true);
@@ -55,7 +55,7 @@ namespace XamarinStore.iOS
 		{
 			proccessView.SpinGear ();
 			var result = await WebService.Shared.PlaceOrder (user);
-			proccessView.Status = result.Success ? "Your order has been placed!" : result.Message;;
+			proccessView.Status = result.Success ? "order_placed".t() : result.Message;;
 			await proccessView.StopGear ();
 			if (!result.Success) {
 				proccessView.ShowTryAgain ();
@@ -93,7 +93,7 @@ namespace XamarinStore.iOS
 				tvc.AddImage (UIImage.FromFile (imagePath));
 			}
 			tvc.AddUrl (NSUrl.FromString("http://xamarin.com/sharp-shirt"));
-			tvc.SetInitialText("I just built a native iOS app with C# using #Xamarin and all I got was this free C# t-shirt!");
+			tvc.SetInitialText("i_just_twitter".t());
 			PresentViewController(tvc, true,null);
 		}
 
@@ -121,7 +121,7 @@ namespace XamarinStore.iOS
 
 				tryAgain = new ImageButton(){
 					TintColor = UIColor.White,
-					Text =  "Try Again"
+					Text =  "try_again".t()
 				};
 				tryAgain.TouchUpInside += (object sender, EventArgs e) => {
 					Animate(.3,tryAgain.RemoveFromSuperview);
@@ -146,7 +146,7 @@ namespace XamarinStore.iOS
 			int currentRotation = 0;
 			public void SpinGear()
 			{
-				Status = "Processing Order...";
+				Status = "process_order".t();
 				if (isSpinning)
 					return;
 				isSpinning = true;
@@ -239,7 +239,7 @@ namespace XamarinStore.iOS
 				});
 
 				AddSubview(label1 = new UILabel{
-					Text = "Order Complete",
+					Text = "order_complete".t(),
 					TextAlignment = UITextAlignment.Center,
 					Font = UIFont.BoldSystemFontOfSize(25),
 					TextColor = UIColor.White,
@@ -248,7 +248,7 @@ namespace XamarinStore.iOS
 				label1.SizeToFit();
 
 				AddSubview(label2 = new UILabel{
-					Text = "We've received your order and we'll email you as soon as your items ship." ,
+					Text = "order_received".t() ,
 					TextAlignment = UITextAlignment.Center,
 					Font = UIFont.SystemFontOfSize(17),
 					Lines = 0,
@@ -259,7 +259,7 @@ namespace XamarinStore.iOS
 				label2.SizeToFit();
 
 				twitter = new ImageButton{
-					Text = "Brag on Twitter",
+					Text = "brag_twitter".t(),
 					Image = UIImage.FromBundle("twitter").ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate),
 					TintColor = UIColor.White,
 					Font = UIFont.SystemFontOfSize(20),
@@ -273,7 +273,7 @@ namespace XamarinStore.iOS
 					AddSubview(twitter);
 
 				AddSubview(done = new ImageButton{
-					Text = "Done",
+					Text = "done".t(),
 					TintColor = UIColor.White,
 					Font = UIFont.SystemFontOfSize(20),
 					Alpha = 0,

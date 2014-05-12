@@ -19,7 +19,7 @@ namespace XamarinStore
 
 		public BasketViewController (Order order)
 		{
-			this.Title = "Your Basket";
+			this.Title = "your_basket".t();
 			//This hides the back button text when you leave this View Controller
 			this.NavigationItem.BackBarButtonItem = new UIBarButtonItem ("", UIBarButtonItemStyle.Plain, handler: null);
 			TableView.Source = new TableViewSource (this.order = order) {
@@ -29,7 +29,7 @@ namespace XamarinStore
 			TableView.RowHeight = 75;
 			TableView.TableFooterView = new UIView (new RectangleF (0, 0, 0, BottomButtonView.Height));
 			this.View.AddSubview (BottomView = new BottomButtonView () {
-				ButtonText = "Checkout",
+				ButtonText = "checkout".t(),
 				ButtonTapped = () => {
 					if (Checkout != null)
 						Checkout (this, EventArgs.Empty);
@@ -190,7 +190,7 @@ namespace XamarinStore
 					ContentView.AddSubview (ColorLabel);
 
 					PriceLabel = new UILabel () {
-						Text = "Price",
+						Text = "price".t(),
 						Font = UIFont.BoldSystemFontOfSize (15f),
 						BackgroundColor = UIColor.Clear,
 						TextAlignment = UITextAlignment.Right,

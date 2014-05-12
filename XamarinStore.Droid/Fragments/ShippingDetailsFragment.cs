@@ -114,11 +114,11 @@ namespace XamarinStore
 				return;
 			}
 
-			var progressDialog = ProgressDialog.Show(this.Activity, "Please wait...", "Placing Order", true);
+			var progressDialog = ProgressDialog.Show(this.Activity, this.Resources.GetString(Resource.String.please_wait), this.Resources.GetString(Resource.String.placing_order), true);
 			var result = await WebService.Shared.PlaceOrder (user);
 			progressDialog.Hide ();
 			progressDialog.Dismiss ();
-			string message = result.Success ? "Your order has been placed!" : "Error: " + result.Message;
+			string message = result.Success ? this.Resources.GetString(Resource.String.order_placed) : this.Resources.GetString(Resource.String.error) + result.Message;
 			Toast.MakeText (Activity, message, ToastLength.Long).Show ();
 			if (!result.Success)
 				return;
