@@ -82,7 +82,7 @@ namespace XamarinStore.iOS
 
 		// TODO: Enter your Xamarin account email address here
 		// If you do not have a Xamarin Account please sign up here: https://store.xamarin.com/account/register
-		readonly string XamarinAccountEmail = "alejandroruizvarela@hotmail.com";
+		readonly string XamarinAccountEmail = "";
 		async void Login (string username, string password)
 		{
 
