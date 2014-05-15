@@ -18,7 +18,7 @@ namespace XamarinStore.iOS
 
 		public ProcessingViewController (User user)
 		{
-			Title = "process";
+			Title = "process".t();
 			this.user = user;
 			this.NavigationItem.RightBarButtonItem = new UIBarButtonItem (UIBarButtonSystemItem.Cancel, (sender,args) => {
 				this.DismissViewControllerAsync(true);
