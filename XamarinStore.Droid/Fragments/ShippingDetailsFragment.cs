@@ -12,6 +12,7 @@ using Android.Views;
 using Android.Widget;
 using Android.Views.InputMethods;
 using System.Threading.Tasks;
+using TranslateApi;
 
 namespace XamarinStore
 {
@@ -114,11 +115,11 @@ namespace XamarinStore
 				return;
 			}
 
-			var progressDialog = ProgressDialog.Show(this.Activity, this.Resources.GetString(Resource.String.please_wait), this.Resources.GetString(Resource.String.placing_order), true);
+			var progressDialog = ProgressDialog.Show(this.Activity, "please_wait".t(this.Activity), "placing_order".t(this.Activity), true);
 			var result = await WebService.Shared.PlaceOrder (user);
 			progressDialog.Hide ();
 			progressDialog.Dismiss ();
-			string message = result.Success ? this.Resources.GetString(Resource.String.order_placed) : this.Resources.GetString(Resource.String.error) + result.Message;
+			string message = result.Success ? "order_placed".t(this.Activity) : "error".t(this.Activity) + result.Message;
 			Toast.MakeText (Activity, message, ToastLength.Long).Show ();
 			if (!result.Success)
 				return;

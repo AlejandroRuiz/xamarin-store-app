@@ -113,6 +113,9 @@
     <Compile Include="Helpers\MatrixEvaluator.cs" />
     <Compile Include="Fragments\BragFragment.cs" />
     <Compile Include="Views\CircleDrawable.cs" />
+    <Compile Include="..\Shared\Helpers\TranslateExtensions.cs">
+      <Link>Shared\Helpers\TranslateExtensions.cs</Link>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

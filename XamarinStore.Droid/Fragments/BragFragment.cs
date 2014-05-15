@@ -9,6 +9,7 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
+using TranslateApi;
 
 namespace XamarinStore
 {
@@ -38,7 +39,7 @@ namespace XamarinStore
 				var intent = new Intent(Intent.ActionSend);
 				intent.PutExtra(Intent.ExtraText,message);
 				intent.SetType("text/plain");
-				StartActivity(Intent.CreateChooser(intent, Resources.GetString(Resource.String.brag_on)));
+				StartActivity(Intent.CreateChooser(intent, "brag_on".t(this.Activity)));
 			} catch(Exception e) {
 				Console.WriteLine (e);
 			}

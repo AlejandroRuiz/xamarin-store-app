@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Threading.Tasks;
 using MonoTouch.CoreGraphics;
 using MonoTouch.CoreAnimation;
+using TranslateApi;
 
 namespace XamarinStore.iOS
 {

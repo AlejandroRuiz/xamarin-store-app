@@ -5,6 +5,7 @@ using System.Drawing;
 using MonoTouch.CoreAnimation;
 using System.Linq;
 using System.Threading.Tasks;
+using TranslateApi;
 
 namespace XamarinStore
 {

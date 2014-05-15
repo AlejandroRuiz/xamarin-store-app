@@ -222,7 +222,9 @@
     <Compile Include="Views\AutoCompleteTextEntry.cs" />
     <Compile Include="Helpers\UIViewExtensions.cs" />
     <Compile Include="ViewControllers\StringTableViewController.cs" />
-    <Compile Include="Helpers\TranslateExtensions.cs" />
+    <Compile Include="..\Shared\Helpers\TranslateExtensions.cs">
+      <Link>Shared\Helpers\TranslateExtensions.cs</Link>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>

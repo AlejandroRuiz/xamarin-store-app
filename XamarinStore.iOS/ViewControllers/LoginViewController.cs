@@ -2,6 +2,7 @@ using System;
 using MonoTouch.UIKit;
 using BigTed;
 using MonoTouch.Foundation;
+using TranslateApi;
 
 namespace XamarinStore.iOS
 {

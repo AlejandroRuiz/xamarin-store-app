@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using MonoTouch.Twitter;
 using System.Linq;
 using MonoTouch.Foundation;
+using TranslateApi;
 
 namespace XamarinStore.iOS
 {

@@ -11,6 +11,7 @@ using Android.Views;
 using Android.Widget;
 using Android.Text;
 using Android.Graphics;
+using TranslateApi;
 
 namespace XamarinStore
 {
@@ -90,20 +91,20 @@ namespace XamarinStore
 		readonly string XamarinAccountEmail = "";
 		async void Login (string username, string password)
 		{
-			var progressDialog = ProgressDialog.Show (this.Activity, this.Resources.GetString(Resource.String.please_wait), this.Resources.GetString(Resource.String.logging_in), true);
+			var progressDialog = ProgressDialog.Show (this.Activity, "please_wait".t(this.Activity), "logging_in".t(this.Activity), true);
 			this.login.Enabled = false;
 			this.password.Enabled = false;
 			var success = await WebService.Shared.Login (username, password);
 			if (success) {
 				var canContinue = await WebService.Shared.PlaceOrder (WebService.Shared.CurrentUser, true);
 				if (!canContinue.Success) {
-					Toast.MakeText (this.Activity, this.Resources.GetString(Resource.String.sorry_one_shirt), ToastLength.Long).Show();
+					Toast.MakeText (this.Activity, "sorry_one_shirt".t(this.Activity), ToastLength.Long).Show();
 				}
 				else
 					LoginSucceeded ();
 			}
 			else 
-				Toast.MakeText (this.Activity, this.Resources.GetString(Resource.String.please_verify_credentials), ToastLength.Long).Show();
+				Toast.MakeText (this.Activity, "please_verify_credentials".t(this.Activity), ToastLength.Long).Show();
 
 			this.login.Enabled = true;
 			this.password.Enabled = true;

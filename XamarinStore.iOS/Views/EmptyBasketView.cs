@@ -1,6 +1,7 @@
 using System;
 using MonoTouch.UIKit;
 using MonoTouch.CoreGraphics;
+using TranslateApi;
 
 namespace XamarinStore
 {

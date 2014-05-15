@@ -52,6 +52,7 @@
     <Compile Include="Data\Color.cs" />
     <Compile Include="Data\FileCache.cs" />
     <Compile Include="Models\Country.cs" />
+    <Compile Include="Helpers\TranslateExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
